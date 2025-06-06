@@ -1,0 +1,39 @@
+.navbar {
+  background-color: var(--primary-dark-blue);
+  display: flex;
+  align-items: center;
+  padding: 1.3em;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+}
+
+li h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+li a {
+  text-decoration: none;
+}
+
+li a:visited {
+  color: var(--primary-white);
+}
+
+li a:hover {
+  border-bottom: 2px solid var(--primary-white);
+}
+
+.logo {
+  width: 3em;
+  filter: var(--primary-gold-icon);
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+  filter: var(--primary-white-icon);
+}
