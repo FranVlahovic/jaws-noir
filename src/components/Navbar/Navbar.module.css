@@ -2,7 +2,9 @@
   background-color: var(--primary-dark-blue);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1.3em;
+  position: relative;
 }
 
 .navbarLinks {
@@ -29,11 +31,33 @@ li a:hover {
 }
 
 .logo {
+  position: absolute;
   width: 3em;
   filter: var(--primary-gold-icon);
   transition: 0.3s ease-in-out;
+  left: 48%;
 }
 
 .logo:hover {
   filter: var(--primary-white-icon);
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.socialLinks h3 {
+  font-weight: 400;
+  color: var(--primary-white);
+}
+
+.socialsIcon img {
+  max-width: 1em;
+  filter: invert();
+}
+.socialsIcon {
+  padding: 1em;
+  border: none;
+  background-color: transparent;
 }
