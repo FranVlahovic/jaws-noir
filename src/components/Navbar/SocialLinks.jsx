@@ -12,9 +12,11 @@ const SocialLinks = ({ toggleCartModal }) => {
         <div className={styles.socialLinks}>
             <h3>EN</h3>
 
-            {/* <SocialsButton className="profileBtn" action={() => openProfileModal} src={ProfileIcon} alt="Profile Icon" /> */}
-            
-            <Link to="/store/favorites" aria-label="Store Favorites">
+            <Link to="login" aria-label="Go to Login Page">
+                <img className={styles.socialsIcon} src={ProfileIcon} alt="Profile Icon" />
+            </Link>
+
+            <Link to="/store/favorites" aria-label="Go to Store Favorites">
                 <img className={styles.socialsIcon} src={FavoritesIcon} alt="Favorites Icon" />
             </Link>
 

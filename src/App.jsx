@@ -17,7 +17,7 @@ export default function App(){
             <Outlet />
             {/* <Footer /> */}
             {isCartOpen && 
-                <div className="cartModal">
+                <div className="cartOverlay">
                     <Sidebar cartItems={cartItems} toggleCartModal={toggleCartModal} />
                 </div>
             }

@@ -1,51 +1,56 @@
 import BackIcon from "../assets/icons/chevron-left.svg"
 import { Link } from "react-router-dom";
+import styles from "./Navbar/Navbar.module.css";
 
 const Sidebar = ({ cartItems, toggleCartModal }) => {
+    const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
     return (
-        <div className="cartSidebar">
-            <div className="storeCart-nav">
-                <button className="backBtn" aria-label="Close Sidebar" onClick={toggleCartModal}>
+        <aside className={styles.cartSidebar}>
+            <div className={styles.storeNav}>
+                <button className={styles.backBtn} aria-label="Close Sidebar" onClick={toggleCartModal}>
                     <img src={BackIcon} alt="Back Icon" />
                     <span>Back</span>
                 </button>
             </div>
-            <div className="storeCart-items-container">
+            <div className={styles.storeItemsContainer}>
                 {cartItems.length > 0 ?
                     <>
-                        <div className="storeCart-items">
+                        <div className={styles.storeCartItems}>
                             {cartItems.map((props) => (    
-                                <div className="cartItem" key={props.id}>
-                                    <div className="cartItem-info">
+                                <div className={styles.cartItem} key={props.id}>
+                                    <div className={styles.cartItemInfo}>
                                         <img src={props.image} alt={`${props.name} image`} />
-                                        <div className="cartItem-details">
+                                        <div className={styles.cartItemDetails}>
                                             <h2>{props.name}</h2>
                                             <span>{`CATEGORY: ${props.category}`}</span>
                                             <span>{`SIZE: ${props.size}`}</span>
                                             <span>{`QUANTITY: ${props.quantity}`}</span>
                                         </div>
                                     </div>
-                                    <div className="cartItem-price">
+                                    <div className={styles.cartItemPrice}>
                                         <span>{`€ ${props.price}`}</span>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="storeCart-items-total">
+                        <div className={styles.storeCartTotalPrice}>
                             <h2>ORDER TOTAL</h2>
-                            <span>{`€1000`}</span>
+                            <span>{`€ ${totalPrice.toFixed(2)}`}</span>
                         </div>
-                        <button className="checkoutBtn" aria-label="Go to checkout">GO TO CHECKOUT</button>
+                        <button className={styles.checkoutBtn} aria-label="Go to checkout">GO TO CHECKOUT</button>
                     </> :
                     <>
-                        <div className="storeCart-items">
+                        <div className={styles.storeCartItems}>
                             <span>You have no items in your shopping cart.</span>
                         </div>
-                        <button className="shopNowBtn" aria-label="Go to store page" onClick={toggleCartModal}><Link to="/store">SHOP NOW</Link></button>
+                        <Link to="/store" className={styles.shopNowBtn} onClick={toggleCartModal} aria-label="Go to store page">
+                        SHOP NOW
+                        </Link>
                     </>
                 }
             </div>
-        </div>
+        </aside>
     );
 }
 

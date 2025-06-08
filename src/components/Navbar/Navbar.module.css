@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.3em;
+  padding: 2em;
   position: relative;
 }
 
@@ -19,7 +19,9 @@ li h3 {
 }
 
 li a {
+  opacity: 0.6;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 li a:visited {
@@ -27,7 +29,7 @@ li a:visited {
 }
 
 li a:hover {
-  border-bottom: 2px solid var(--primary-white);
+  opacity: 1;
 }
 
 .logo {
@@ -45,19 +47,26 @@ li a:hover {
 .socialLinks {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 1.5em;
 }
 .socialLinks h3 {
+  font-size: 1rem;
   font-weight: 400;
   color: var(--primary-white);
 }
 
-.socialsIcon img {
-  max-width: 1em;
-  filter: invert();
-}
 .socialsIcon {
-  padding: 1em;
+  width: 1.4em;
+  filter: var(--primary-white-icon);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  opacity: 0.6;
+}
+.socialsIcon:hover {
+  opacity: 1;
+}
+
+.cartBtn {
   border: none;
   background-color: transparent;
 }
