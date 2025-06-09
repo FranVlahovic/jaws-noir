@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer/Footer';
 
 export default function App(){
     const [isCartOpen, setIsCartOpen] = useState(false)
@@ -15,7 +16,7 @@ export default function App(){
         <>
             <Navbar toggleCartModal={toggleCartModal} />
             <Outlet />
-            {/* <Footer /> */}
+            <Footer />
             {isCartOpen && 
                 <div className="cartOverlay">
                     <Sidebar cartItems={cartItems} toggleCartModal={toggleCartModal} />

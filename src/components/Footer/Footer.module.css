@@ -1,0 +1,88 @@
+footer {
+  background-color: var(--primary-dark-blue);
+  display: flex;
+  justify-content: space-around;
+  padding: 3em;
+}
+
+.customerService,
+.legalInformation,
+.jawsWorld {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.customerService h2,
+.legalInformation h2,
+.jawsWorld h2,
+.storeLocation h2,
+.followUs h2 {
+  font-size: 1rem;
+  color: var(--primary-white);
+  font-weight: 400;
+}
+
+.customerService a,
+.legalInformation a,
+.jawsWorld a {
+  text-decoration: none;
+  color: var(--primary-white);
+  transition: 0.3s ease-in-out;
+  opacity: 0.6;
+}
+.customerService a:hover,
+.legalInformation a:hover,
+.jawsWorld a:hover {
+  opacity: 1;
+}
+
+.socialsIcon,
+.locationIcon {
+  width: 1.4em;
+  filter: var(--primary-white-icon);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  opacity: 0.6;
+}
+.socialsIcon:hover {
+  opacity: 1;
+}
+
+.locationIcon {
+  filter: var(--primary-white-icon);
+  cursor: auto;
+}
+.locationIcon:not:hover {
+}
+
+.locationSocials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.findStore {
+  display: flex;
+}
+.findStore a {
+  text-decoration: none;
+  color: var(--primary-white);
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+.findStore a:hover {
+  opacity: 1;
+}
+
+.followUsSocials {
+  display: flex;
+  gap: 1em;
+}
+
+.storeLocation,
+.followUs {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
