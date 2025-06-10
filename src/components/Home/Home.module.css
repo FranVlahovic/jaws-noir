@@ -1,0 +1,75 @@
+.homeClub,
+.carouselItem {
+  background-image: url('/src/assets/images/sail3.jpg');
+  background-size: cover;
+  background-position: 1em;
+  height: 100dvh;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.3em;
+}
+.homeClub::before,
+.carouselItem::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.clubHeading,
+.carouselHeading {
+  font-size: 2rem;
+  color: var(--primary-white);
+  font-weight: 500;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: var(--primary-white);
+  font-weight: 500;
+  border: 2px solid var(--primary-white);
+  border-radius: 5px;
+  padding: 1.2em;
+  transition: 0.3s ease-in-out;
+  opacity: 0.7;
+}
+.homeLink:hover {
+  opacity: 1;
+}
+
+.homeCarousel {
+  background-image: url('/src/assets/images/sail2.jpg');
+  background-size: cover;
+  height: 100dvh;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.3em;
+}
+.homeCarousel::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.carouselItem 

@@ -1,8 +1,11 @@
+import HomeClub from "./HomeClub";
+import HomeCarousel from "./HomeCarousel";
+
 const Home = () => {
     return (
         <div className="home">
-            <h1>This a test</h1>
-            {/* <HomeCarousel /> */}
+            <HomeCarousel />
+            <HomeClub />
         </div>
     );
 }
