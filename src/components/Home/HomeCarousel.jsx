@@ -29,20 +29,28 @@ const HomeCarousel = () => {
         setIndex((prevIndex) => (prevIndex + 1) % carouselItems.length)
     }
 
+    useEffect(() => {
+        const autoCarousel = setInterval(() => {
+            nextSlide();
+        }, 10000);
+
+        return () => clearInterval(autoCarousel);
+    }, [index]);
+
     return (
-        <div className={styles.homeCarousel}>
-            <button onClick={prevSlide}>
+        <div className={styles[carouselItems[index].class]}>
+            <button className={styles.arrowBtnLeft} onClick={prevSlide} aria-label="Previous Slide">
                 <img src={Arrow} alt="Previous Slide Arrow" />
             </button>
             <div className={styles.carouselItem}>
-                <h1 className="carouselHeading">
+                <h1 className={styles.carouselHeading}>
                     {carouselItems[index].title}
                 </h1>
                 <Link to={carouselItems[index].link} className={styles.homeLink}>
                     SHOP NOW
                 </Link>                
             </div>
-            <button onClick={nextSlide}>
+            <button className={styles.arrowBtnRight} onClick={nextSlide} aria-label="Next Slide" >
                 <img src={Arrow} alt="Next Slide Arrow" />
             </button>
         </div>

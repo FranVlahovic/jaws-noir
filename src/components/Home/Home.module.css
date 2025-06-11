@@ -1,5 +1,4 @@
-.homeClub,
-.carouselItem {
+.homeClub {
   background-image: url('/src/assets/images/sail3.jpg');
   background-size: cover;
   background-position: 1em;
@@ -13,8 +12,7 @@
   text-align: center;
   gap: 1.3em;
 }
-.homeClub::before,
-.carouselItem::before {
+.homeClub::before {
   content: '';
   position: absolute;
   background-color: black;
@@ -47,20 +45,19 @@
   opacity: 1;
 }
 
-.homeCarousel {
-  background-image: url('/src/assets/images/sail2.jpg');
+.carouselSlideHer,
+.carouselSlideHim {
   background-size: cover;
-  height: 100dvh;
   z-index: 1;
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.3em;
+  justify-content: space-between;
+  padding: 1em;
 }
-.homeCarousel::before {
+
+.carouselSlideHer::before,
+.carouselSlideHim::before {
   content: '';
   position: absolute;
   background-color: black;
@@ -72,4 +69,44 @@
   z-index: -1;
 }
 
-.carouselItem 
+.carouselSlideHer {
+  background-image: url('../../assets/images/sail2.jpg');
+  background-position: bottom;
+}
+.carouselSlideHim {
+  background-image: url('../../assets/images/sail1.jpg');
+  background-position: bottom;
+}
+
+.carouselItem {
+  background-size: cover;
+  background-position: 1em;
+  height: 100dvh;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.3em;
+}
+
+.arrowBtnLeft,
+.arrowBtnRight {
+  width: 3em;
+  height: 100dvh;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  filter: var(--primary-blue-icon);
+  transition: 0.3s ease-in-out;
+}
+.arrowBtnLeft:hover,
+.arrowBtnRight:hover {
+  filter: var(--primary-white-icon);
+}
+
+.arrowBtnRight {
+  transform: rotate(180deg);
+}

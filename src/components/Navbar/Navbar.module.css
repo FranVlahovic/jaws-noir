@@ -11,6 +11,7 @@
   display: flex;
   gap: 2em;
   list-style-type: none;
+  width: 20em;
 }
 
 li h3 {
@@ -33,11 +34,9 @@ li a:hover {
 }
 
 .logo {
-  position: absolute;
   width: 3em;
   filter: var(--primary-gold-icon);
   transition: 0.3s ease-in-out;
-  left: 48%;
 }
 
 .logo:hover {
@@ -47,7 +46,9 @@ li a:hover {
 .socialLinks {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1.5em;
+  width: 20em;
 }
 .socialLinks h3 {
   font-size: 1rem;

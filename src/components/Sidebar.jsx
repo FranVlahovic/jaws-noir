@@ -1,6 +1,6 @@
 import BackIcon from "../assets/icons/chevron-left.svg"
 import { Link } from "react-router-dom";
-import styles from "./Navbar/Navbar.module.css";
+import styles from "./Sidebar.module.css";
 
 const Sidebar = ({ cartItems, toggleCartModal }) => {
     const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -10,7 +10,7 @@ const Sidebar = ({ cartItems, toggleCartModal }) => {
             <div className={styles.storeNav}>
                 <button className={styles.backBtn} aria-label="Close Sidebar" onClick={toggleCartModal}>
                     <img src={BackIcon} alt="Back Icon" />
-                    <span>Back</span>
+                    <span>Continue shopping</span>
                 </button>
             </div>
             <div className={styles.storeItemsContainer}>
