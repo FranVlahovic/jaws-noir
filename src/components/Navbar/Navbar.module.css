@@ -70,6 +70,17 @@ li a:hover {
 .cartBtn {
   border: none;
   background-color: transparent;
+  position: relative;
+}
+.cartItemCount {
+  bottom: 5em;
+  right: 2em;
+  position: absolute;
+  padding: 0.1em 0.5em;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  border-radius: 2em;
+  font-size: 0.7em;
 }
 
 /* @media (max-width: 425px) {

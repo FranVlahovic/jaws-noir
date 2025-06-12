@@ -4,9 +4,22 @@ import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer/Footer';
 
+import TestImage from "./assets/images/sail2.jpg"
+
 export default function App(){
     const [isCartOpen, setIsCartOpen] = useState(false)
-    const [cartItems, setCartItems] = useState([])
+    const [cartItems, setCartItems] = useState([
+        {
+            id: crypto.randomUUID(),
+            name: "TEST PRODUCT",
+            image: TestImage,
+            category: "Men Clothing",
+            size: "L",
+            quantity: 1,
+            price: 275,
+        },
+        
+    ])
 
     function toggleCartModal(){
         setIsCartOpen(prev => !prev)
@@ -14,7 +27,7 @@ export default function App(){
 
     return (
         <>
-            <Navbar toggleCartModal={toggleCartModal} />
+            <Navbar toggleCartModal={toggleCartModal} cartItems={cartItems} />
             <Outlet />
             <Footer />
             {isCartOpen && 

@@ -7,7 +7,7 @@ import CartIcon from "/src/assets/icons/purse-outline.svg";
 
 import SocialsButton from "./SocialsButton";
 
-const SocialLinks = ({ toggleCartModal }) => {
+const SocialLinks = ({ toggleCartModal, cartItems }) => {
     return (
         <div className={styles.socialLinks}>
             <h3>EN</h3>
@@ -21,6 +21,7 @@ const SocialLinks = ({ toggleCartModal }) => {
             </Link>
 
             <SocialsButton className={styles.cartBtn} action={() => toggleCartModal()} src={CartIcon} alt="Profile Icon" />
+            {cartItems && <div className={styles.cartItemCount}><span>{cartItems.length}</span></div>}
         </div>
     );
 };

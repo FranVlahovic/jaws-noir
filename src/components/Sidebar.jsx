@@ -16,7 +16,7 @@ const Sidebar = ({ cartItems, toggleCartModal }) => {
             <div className={styles.storeItemsContainer}>
                 {cartItems.length > 0 ?
                     <>
-                        <div className={styles.storeCartItems}>
+                        <div style={{ overflowY: cartItems.length > 2 ? "scroll" : "auto", height: cartItems.length > 2 ? "30em" : "unset" }} className={styles.storeCartItems}>
                             {cartItems.map((props) => (    
                                 <div className={styles.cartItem} key={props.id}>
                                     <div className={styles.cartItemInfo}>
@@ -29,7 +29,7 @@ const Sidebar = ({ cartItems, toggleCartModal }) => {
                                         </div>
                                     </div>
                                     <div className={styles.cartItemPrice}>
-                                        <span>{`€ ${props.price}`}</span>
+                                        <span>{`€ ${props.price.toFixed(2)}`}</span>
                                     </div>
                                 </div>
                             ))}
