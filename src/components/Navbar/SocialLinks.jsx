@@ -21,7 +21,7 @@ const SocialLinks = ({ toggleCartModal, cartItems }) => {
             </Link>
 
             <SocialsButton className={styles.cartBtn} action={() => toggleCartModal()} src={CartIcon} alt="Profile Icon" />
-            {cartItems && <div className={styles.cartItemCount}><span>{cartItems.length}</span></div>}
+            {cartItems.length > 0 && <div className={styles.cartItemCount}><span>{cartItems.length}</span></div>}
         </div>
     );
 };

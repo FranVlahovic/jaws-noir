@@ -28,7 +28,8 @@
 }
 .backBtn span,
 .storeCartItems span,
-.checkoutBtn {
+.checkoutBtn,
+.storeCartItemsEmpty span {
   font-size: 1rem;
   color: var(--primary-white);
 }
@@ -100,4 +101,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.removeItem {
+  border: none;
+  background-color: transparent;
+  font-size: 0.8em;
+  color: var(--primary-white);
+  cursor: pointer;
+  width: fit-content;
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+.removeItem:hover {
+  opacity: 1;
+}
+
+.storeCartItemsEmpty {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--primary-white);
 }

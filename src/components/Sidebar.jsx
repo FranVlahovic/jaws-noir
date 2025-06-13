@@ -2,7 +2,7 @@ import BackIcon from "../assets/icons/chevron-left.svg"
 import { Link } from "react-router-dom";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = ({ cartItems, toggleCartModal }) => {
+const Sidebar = ({ cartItems, toggleCartModal, removeCartItem }) => {
     const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
@@ -26,6 +26,7 @@ const Sidebar = ({ cartItems, toggleCartModal }) => {
                                             <span>{`CATEGORY: ${props.category}`}</span>
                                             <span>{`SIZE: ${props.size}`}</span>
                                             <span>{`QUANTITY: ${props.quantity}`}</span>
+                                            <button className={styles.removeItem} onClick={() => removeCartItem(props.id)}>X Remove Item</button>
                                         </div>
                                     </div>
                                     <div className={styles.cartItemPrice}>
@@ -41,7 +42,7 @@ const Sidebar = ({ cartItems, toggleCartModal }) => {
                         <button className={styles.checkoutBtn} aria-label="Go to checkout">GO TO CHECKOUT</button>
                     </> :
                     <>
-                        <div className={styles.storeCartItems}>
+                        <div className={styles.storeCartItemsEmpty}>
                             <span>You have no items in your shopping cart.</span>
                         </div>
                         <Link to="/store" className={styles.shopNowBtn} onClick={toggleCartModal} aria-label="Go to store page">

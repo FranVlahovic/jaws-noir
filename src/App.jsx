@@ -25,6 +25,10 @@ export default function App(){
         setIsCartOpen(prev => !prev)
     }
 
+    function removeCartItem(id) {
+        setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+    }
+
     return (
         <>
             <Navbar toggleCartModal={toggleCartModal} cartItems={cartItems} />
@@ -32,7 +36,7 @@ export default function App(){
             <Footer />
             {isCartOpen && 
                 <div className="cartOverlay">
-                    <Sidebar cartItems={cartItems} toggleCartModal={toggleCartModal} />
+                    <Sidebar cartItems={cartItems} toggleCartModal={toggleCartModal} removeCartItem={removeCartItem} />
                 </div>
             }
         </>
