@@ -3,6 +3,8 @@ import Home from "./components/Home/Home";
 import Favorites from "./components/Store/Favorites";
 import StoreItem from "./components/Store/StoreItem";
 import Store from "./components/Store/Store";
+import Login from "./components/Login/Login";
+
 const routes = [
     {
         path: "/",
@@ -24,6 +26,10 @@ const routes = [
             {
                 path: "store",
                 element: <Store />,
+            },
+            {
+                path: "login",
+                element: <Login />
             },
             {
                 path: "store/favorites",
