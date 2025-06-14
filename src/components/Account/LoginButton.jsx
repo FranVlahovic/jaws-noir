@@ -1,6 +1,6 @@
 const LoginButton = (props) => {
     return (
-        <button type="button" className={props.className} onClick={props.action}>
+        <button type={props.type} className={props.className} onClick={props.action}>
             {props.text}
         </button>
     );

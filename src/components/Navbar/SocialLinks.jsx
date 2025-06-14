@@ -12,7 +12,7 @@ const SocialLinks = ({ toggleCartModal, cartItems }) => {
         <div className={styles.socialLinks}>
             <h3>EN</h3>
 
-            <Link to="login" aria-label="Go to Login Page">
+            <Link to="account" aria-label="Go to Login Page">
                 <img className={styles.socialsIcon} src={ProfileIcon} alt="Profile Icon" />
             </Link>
 
