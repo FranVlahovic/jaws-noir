@@ -1,11 +1,14 @@
 import styles from "./Account.module.css";
-import LoginButton from "./AccountButton";
 import { useState } from "react";
+import SuccessIcon from "../../assets/icons/check-bold.svg";
+import AccountButton from "./AccountButton";
 
-const LoginUser = ({ setShowLoginPopup, setLogStatus }) => {
+const LoginUser = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showLoginPopup, setShowLoginPopup] = useState(false);
+    const [logStatus, setLogStatus] = useState("");
 
     const loginDetails = [
         {
@@ -18,32 +21,74 @@ const LoginUser = ({ setShowLoginPopup, setLogStatus }) => {
         }
     ]
 
-    function handleLogin(e){
-        e.preventDefault()
-        const matchCredentials = loginDetails.find((user) => user.email === email && user.password === password);
-        matchCredentials ? setLogStatus("success") : setLogStatus("failed");
+    async function handleLogin(e) {
+        e.preventDefault();
+
         setShowLoginPopup(true);
+        setLogStatus("checking");
+    
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+    
+        const matchCredentials = loginDetails.find(
+            (user) => user.email === email && user.password === password
+        );
+    
+        if (matchCredentials) {
+            setLogStatus("success");
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+            setLogStatus("loggedIn");
+        } else {
+            setLogStatus("failed");
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+            handleLogout();
+        }
+    }
+    
+
+    function handleLogout(){
+        setLogStatus("")
+        setEmail("")
+        setPassword("")
     }
 
     return (
-        <form onSubmit={handleLogin} className={styles.loginForm}>
-            <h1>ALREADY OUR CUSTOMER?</h1>
-            
-            <label htmlFor="email">EMAIL</label>
-            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <>
+        {logStatus !== "loggedIn" ? 
+            <form onSubmit={handleLogin} className={styles.loginForm}>
+                <h1>ALREADY OUR CUSTOMER?</h1>
+                
+                <label htmlFor="email">EMAIL</label>
+                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-            <label htmlFor="password">PASSWORD</label>
-            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <label htmlFor="password">PASSWORD</label>
+                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-            <div className={styles.rememberLogin}>
-                <div className={styles.rememberMeCheckbox}>
-                    <input type="checkbox" name="rememberMe" id="rememberMe" />
-                    <label htmlFor="rememberMe">Remember me</label>
+                <div className={styles.rememberLogin}>
+                    <div className={styles.rememberMeCheckbox}>
+                        <input type="checkbox" name="rememberMe" id="rememberMe" />
+                        <label htmlFor="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#">Forgot password?</a>
                 </div>
-                <a href="#">Forgot password?</a>
+                <AccountButton type="submit" className={styles.loginBtn} text="LOGIN" />
+                
+                {showLoginPopup && (
+                    <span className={styles.loginStatusMsg}>
+                        {logStatus === "checking" && "Checking credentials..."}
+                        {logStatus === "failed" && "Login failed."}
+                        {logStatus === "success" && "Logged in successfully."}
+                    </span>
+                )}
+
+            </form> : 
+            <div className="loggedIn">
+                <img src={SuccessIcon} alt="Successful Login Icon" />
+                <h1>YOU ARE ALL SET</h1>
+                <p>You are now ready to use all of the benefits included with your Jaws & Noir Club Subscription</p>
+                <p>Click <a href="#" onClick={handleLogout}>here</a> to logout.</p>
             </div>
-            <LoginButton type="submit" className={styles.loginBtn} text="LOGIN" />
-        </form>
+        }
+        </>
     );
 }
 
