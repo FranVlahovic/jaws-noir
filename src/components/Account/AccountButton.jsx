@@ -1,4 +1,4 @@
-const LoginButton = (props) => {
+const AccountButton = (props) => {
     return (
         <button type={props.type} className={props.className} onClick={props.action}>
             {props.text}
@@ -6,4 +6,4 @@ const LoginButton = (props) => {
     );
 };
 
-export default LoginButton;
+export default AccountButton;

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LoginUser from "./LoginUser";
+import RegisterUser from "./RegisterUser";
 
 import SuccessIcon from "../../assets/icons/check-bold.svg";
 import FailedIcon from "../../assets/icons/close-thick.svg";
@@ -9,13 +10,23 @@ const UserAccount = () => {
     const [showLoginPopup, setShowLoginPopup] = useState(false);
     const [logStatus, setLogStatus] = useState("");
 
+    useEffect(() => {
+        if(showLoginPopup){
+            const timer = setTimeout(() => {
+                setShowLoginPopup(false);
+                setLogStatus("");
+            }, 20000);
+            return () => clearTimeout(timer)
+        }
+    }, [showLoginPopup])
+
     return (
         <>
             <div className="loginContainer">
-                <LoginUser showLoginPopup={showLoginPopup} setShowLoginPopup={setShowLoginPopup} setLogStatus={setLogStatus} />
+                <LoginUser setShowLoginPopup={setShowLoginPopup} setLogStatus={setLogStatus} />
             </div>
             <div className="registerContainer">
-
+                <RegisterUser />
             </div>
 
             {showLoginPopup && (

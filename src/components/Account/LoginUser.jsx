@@ -1,8 +1,8 @@
-import styles from "./Login.module.css";
-import LoginButton from "./LoginButton";
-import { useState, useEffect } from "react";
+import styles from "./Account.module.css";
+import LoginButton from "./AccountButton";
+import { useState } from "react";
 
-const LoginUser = ({ showLoginPopup, setShowLoginPopup, setLogStatus }) => {
+const LoginUser = ({ setShowLoginPopup, setLogStatus }) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,16 +24,6 @@ const LoginUser = ({ showLoginPopup, setShowLoginPopup, setLogStatus }) => {
         matchCredentials ? setLogStatus("success") : setLogStatus("failed");
         setShowLoginPopup(true);
     }
-
-    useEffect(() => {
-        if(showLoginPopup){
-            const timer = setTimeout(() => {
-                setShowLoginPopup(false);
-                setLogStatus("");
-            }, 20000);
-            return () => clearTimeout(timer)
-        }
-    }, [showLoginPopup])
 
     return (
         <form onSubmit={handleLogin} className={styles.loginForm}>
