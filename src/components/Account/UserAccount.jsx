@@ -1,17 +1,26 @@
 import LoginUser from "./LoginUser";
 import RegisterUser from "./RegisterUser";
+import styles from "./Account.module.css"; 
+import { useState } from "react";
 
 const UserAccount = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    
+    function autoFillForm(){
+        setEmail("admin@admin.com");
+        setPassword("admin");
+    }
 
     return (
-        <>
-            <div className="loginContainer">
-                <LoginUser />
+        <div className={styles.userAccount}>
+            <div className={styles.loginContainer}>
+                <LoginUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} />
             </div>
-            <div className="registerContainer">
-                <RegisterUser />
+            <div className={styles.registerContainer}>
+                <RegisterUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} />
             </div>
-        </>
+        </div>
     );
 }
 

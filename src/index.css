@@ -35,3 +35,7 @@ img {
   background-color: rgba(8, 8, 8, 0.6);
   z-index: 1;
 }
+
+ul {
+  list-style-position: inside;
+}

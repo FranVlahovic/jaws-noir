@@ -3,13 +3,12 @@ import { useState } from "react";
 import SuccessIcon from "../../assets/icons/check-bold.svg";
 import AccountButton from "./AccountButton";
 
-const LoginUser = () => {
+const LoginUser = ({ email, setEmail, password, setPassword, autoFillForm }) => {
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [showLoginPopup, setShowLoginPopup] = useState(false);
     const [logStatus, setLogStatus] = useState("");
 
+    // PUBLIC SINCE IT DOESN'T HAVE REAL AUTH
     const loginDetails = [
         {
             email: "hovla.office@gmail.com",
@@ -51,24 +50,29 @@ const LoginUser = () => {
         setPassword("")
     }
 
+
     return (
         <>
         {logStatus !== "loggedIn" ? 
             <form onSubmit={handleLogin} className={styles.loginForm}>
                 <h1>ALREADY OUR CUSTOMER?</h1>
                 
-                <label htmlFor="email">EMAIL</label>
-                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <div className={styles.formGroup}>
+                    <label htmlFor="email">EMAIL</label>
+                    <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
 
-                <label htmlFor="password">PASSWORD</label>
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <div className={styles.formGroup}>
+                    <label htmlFor="password">PASSWORD</label>
+                    <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </div>
 
                 <div className={styles.rememberLogin}>
                     <div className={styles.rememberMeCheckbox}>
                         <input type="checkbox" name="rememberMe" id="rememberMe" />
                         <label htmlFor="rememberMe">Remember me</label>
                     </div>
-                    <a href="#">Forgot password?</a>
+                    <a href="#" onClick={autoFillForm}>Forgot password?</a>
                 </div>
                 <AccountButton type="submit" className={styles.loginBtn} text="LOGIN" />
                 
@@ -81,11 +85,13 @@ const LoginUser = () => {
                 )}
 
             </form> : 
-            <div className="loggedIn">
+            <div className={styles.loggedIn}>
                 <img src={SuccessIcon} alt="Successful Login Icon" />
-                <h1>YOU ARE ALL SET</h1>
-                <p>You are now ready to use all of the benefits included with your Jaws & Noir Club Subscription</p>
-                <p>Click <a href="#" onClick={handleLogout}>here</a> to logout.</p>
+                <div className={styles.loggedInDetails}>
+                    <h1>YOU ARE ALL SET!</h1>
+                    <p>You are now ready to use all of the benefits included with your Jaws & Noir Club Subscription</p>
+                    <p>Click <a href="#" onClick={handleLogout}>here</a> to logout.</p>
+                </div>
             </div>
         }
         </>
