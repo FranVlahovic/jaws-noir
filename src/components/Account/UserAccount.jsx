@@ -13,14 +13,14 @@ const UserAccount = () => {
     }
 
     return (
-        <div className={styles.userAccount}>
+        <section className={styles.userAccount}>
             <div className={styles.loginContainer}>
                 <LoginUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} />
             </div>
             <div className={styles.registerContainer}>
                 <RegisterUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} />
             </div>
-        </div>
+        </section>
     );
 }
 

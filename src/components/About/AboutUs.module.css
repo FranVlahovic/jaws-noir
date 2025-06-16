@@ -1,0 +1,34 @@
+.aboutUsImageFirst,
+.aboutUsImageSecond {
+  background-size: cover;
+  height: 60em;
+  z-index: 1;
+  position: relative;
+}
+
+.aboutUsImageFirst {
+  background-image: url(../../assets/images/about1.jpg);
+}
+.aboutUsImageSecond {
+  background-image: url(../../assets/images/about2.jpg);
+  background-position: bottom;
+}
+
+.aboutUsImageFirst::before,
+.aboutUsImageSecond::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.aboutUsMain {
+  background-color: var(--primary-dark-blue);
+  color: var(--primary-white);
+  padding: 9em 18.5em;
+}

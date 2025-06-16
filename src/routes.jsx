@@ -4,6 +4,7 @@ import Favorites from "./components/Store/Favorites";
 import StoreItem from "./components/Store/StoreItem";
 import Store from "./components/Store/Store";
 import Account from "./components/Account/UserAccount";
+import AboutUs from "./components/About/AboutUs";
 
 const routes = [
     {
@@ -21,7 +22,7 @@ const routes = [
             },
             {
                 path: "about",
-                // element: <About />
+                element: <AboutUs />
             },
             {
                 path: "store",

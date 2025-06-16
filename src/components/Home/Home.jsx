@@ -3,10 +3,10 @@ import HomeCarousel from "./HomeCarousel";
 
 const Home = () => {
     return (
-        <div className="home">
+        <section className="home">
             <HomeCarousel />
             <HomeClub />
-        </div>
+        </section>
     );
 }
 export default Home;
