@@ -1,17 +1,17 @@
 import RegisterButton from "./AccountButton";
 import styles from "./Account.module.css";
 
-const RegisterUser = ({ autoFillForm }) => {
+const RegisterUser = ({ action }) => {
 
     return(
         <>
             <div className={styles.registerCta}>
-                <div className={styles.aboutClub}>
+                <div className={styles.aboutClub} id="jawsClub">
                     <h1>NEW CUSTOMER?</h1>
                     <p>To enjoy all the advantages, join the Jaws & Noir club.</p>
                     <p>A dedicated are where you can collect miles, choose prizes from an extensive catalogue, access exclusive initiatives and prize contests and manage purchases and returns more quickly, saving your delivery preferences and payment options.</p>
                 </div>
-                <RegisterButton type="button" className={styles.loginBtn} text="REGISTER NOW" action={autoFillForm} />
+                <RegisterButton type="button" className={styles.loginBtn} text="REGISTER NOW" action={action} />
             </div>
             <div className={styles.clubAdvantages}>
                 <h2>THE JAWS & NOIR CLUB OFFERS MANY ADVANTAGES TO ITS MEMBERS:</h2>

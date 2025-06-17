@@ -18,7 +18,7 @@ const UserAccount = () => {
                 <LoginUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} />
             </div>
             <div className={styles.registerContainer}>
-                <RegisterUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} />
+                <RegisterUser email={email} setEmail={setEmail} password={password} setPassword={setPassword} autoFillForm={autoFillForm} action={autoFillForm} />
             </div>
         </section>
     );

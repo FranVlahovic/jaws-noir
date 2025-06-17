@@ -89,17 +89,20 @@ h1 {
   display: flex;
   gap: 2.5em;
 }
+
 .registerCta {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
 }
+
 .aboutClub,
 .clubAdvantages,
 .clubAdvantages ul {
   display: flex;
   flex-direction: column;
   gap: 0.6em;
+  line-height: 1.75em;
 }
 
 .clubAdvantages h2 {
