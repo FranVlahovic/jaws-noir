@@ -4,15 +4,13 @@ import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer/Footer';
 
-import TestImage from "./assets/images/sail2.jpg"
-
 export default function App(){
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [cartItems, setCartItems] = useState([
         {
             id: crypto.randomUUID(),
             name: "TEST PRODUCT",
-            image: TestImage,
+            image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
             category: "Men Clothing",
             size: "L",
             quantity: 1,

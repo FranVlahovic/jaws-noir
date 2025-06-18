@@ -1,6 +1,6 @@
 import App from "./App";
 import Home from "./components/Home/Home";
-import Favorites from "./components/Store/Favorites";
+import Favorites from "./components/Favorites/Favorites";
 import StoreItem from "./components/Store/StoreItem";
 import Store from "./components/Store/Store";
 import Account from "./components/Account/UserAccount";
