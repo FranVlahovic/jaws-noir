@@ -70,16 +70,28 @@ li a:hover {
 .cartBtn {
   border: none;
   background-color: transparent;
-  position: relative;
 }
-.cartItemCount {
-  bottom: 5em;
-  right: 2em;
+.cartBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.iconAndCount {
+  position: relative;
+  display: flex;
+  width: 1.4em;
+}
+
+.itemCountBadge {
   position: absolute;
-  padding: 0.1em 0.5em;
+  bottom: 1.2em;
+  left: 1.2em;
   background-color: var(--primary-red);
   color: var(--primary-white);
   border-radius: 2em;
+  padding: 0.1em 0.5em;
   font-size: 0.7em;
 }
 

@@ -1,0 +1,73 @@
+.favoritesSection {
+  background-color: var(--primary-dark-blue);
+  padding: 2em;
+}
+
+.favoriteItemsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2em 0em;
+}
+
+.favoritesSection h2 {
+  font-size: 1.2rem;
+  color: var(--primary-white);
+  font-weight: 400;
+}
+
+.favoriteItemCard {
+  display: flex;
+  flex-direction: column;
+  width: 28em;
+  gap: 1em;
+}
+
+.favoriteItemCardImage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.favoriteItemCardImage button {
+  position: absolute;
+  width: 2em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  right: 1em;
+  top: 1em;
+}
+
+.favoriteItemImage {
+  height: 34.3em;
+  object-fit: cover;
+  object-position: top;
+}
+
+.favoriteItemCardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.favoriteItemCardDetails h2,
+.favoriteItemCardDetails span {
+  color: var(--primary-white);
+  font-size: 1.2rem;
+}
+
+.favoriteToCartBtn {
+  display: flex;
+  padding: 1.2em;
+  justify-content: center;
+  border: 1px solid var(--primary-white);
+  border-radius: 0.5em;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--primary-white);
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+.favoriteToCartBtn:hover {
+  opacity: 1;
+}

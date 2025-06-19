@@ -22,7 +22,7 @@ const Sidebar = ({ cartItems, toggleCartModal, removeCartItem }) => {
                                     <div className={styles.cartItemInfo}>
                                         <img src={props.image} alt={`${props.name} image`} />
                                         <div className={styles.cartItemDetails}>
-                                            <h2>{props.name}</h2>
+                                            <h2>{props.title}</h2>
                                             <span>{`CATEGORY: ${props.category}`}</span>
                                             <span>{`SIZE: ${props.size}`}</span>
                                             <span>{`QUANTITY: ${props.quantity}`}</span>

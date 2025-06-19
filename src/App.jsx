@@ -9,7 +9,7 @@ export default function App(){
     const [cartItems, setCartItems] = useState([
         {
             id: crypto.randomUUID(),
-            name: "TEST PRODUCT",
+            title: "TEST PRODUCT",
             image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
             category: "Men Clothing",
             size: "L",
@@ -17,6 +17,18 @@ export default function App(){
             price: 275,
         },
         
+    ])
+
+    const [favoriteItems, setFavoriteItems] = useState([
+        {
+            id: crypto.randomUUID(),
+            title: "Rain Jacket",
+            size: "L",
+            price: 39.99,
+            category: "Women Clothing",
+            quantity: 1,
+            image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+        },
     ])
 
     function toggleCartModal(){
@@ -29,8 +41,8 @@ export default function App(){
 
     return (
         <>
-            <Navbar toggleCartModal={toggleCartModal} cartItems={cartItems} />
-            <Outlet />
+            <Navbar toggleCartModal={toggleCartModal} cartItems={cartItems} favoriteItems={favoriteItems} />
+            <Outlet context={ { setCartItems, favoriteItems, setFavoriteItems }}/>
             <Footer />
             {isCartOpen && 
                 <div className="cartOverlay">
