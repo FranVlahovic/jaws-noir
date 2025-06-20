@@ -11,7 +11,7 @@
   display: flex;
   gap: 2em;
   list-style-type: none;
-  width: 20em;
+  width: 28em;
 }
 
 li h3 {
@@ -48,7 +48,7 @@ li a:hover {
   align-items: center;
   justify-content: flex-end;
   gap: 1.5em;
-  width: 20em;
+  width: 28em;
 }
 .socialLinks h3 {
   font-size: 1rem;

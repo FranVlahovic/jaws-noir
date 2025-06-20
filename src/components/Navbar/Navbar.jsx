@@ -4,7 +4,6 @@ import styles from "./Navbar.module.css";
 import Logo from "./Logo";
 
 const Navbar = ({ toggleCartModal, cartItems, favoriteItems }) => {
-
     return (
         <nav className={styles.navbar}>
             <NavbarLinks />

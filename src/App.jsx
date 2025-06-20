@@ -42,7 +42,7 @@ export default function App(){
     return (
         <>
             <Navbar toggleCartModal={toggleCartModal} cartItems={cartItems} favoriteItems={favoriteItems} />
-            <Outlet context={ { setCartItems, favoriteItems, setFavoriteItems }}/>
+            <Outlet context={{ setCartItems, favoriteItems, setFavoriteItems }}/>
             <Footer />
             {isCartOpen && 
                 <div className="cartOverlay">
