@@ -8,13 +8,13 @@ const FavoriteItem = (props) => {
                 <img className={styles.favoriteItemImage} src={props.url} alt="Favorite Item Image" />
                 <button className={styles.removeFavoriteBtn} onClick={props.removeFavorite}>
                     <img src={FavoritesIcon} alt="Favorite Icon" />    
-                </button>  
+                </button>
             </div>
             <div className={styles.favoriteItemCardDetails}>
                 <h2>{props.title}</h2>
                 <span>{`€ ${props.price.toFixed(2)}`}</span>
             </div>
-            <button className={styles.favoriteToCartBtn} onClick={props.action}>ADD TO CART</button>
+            {/* <button className={styles.favoriteToCartBtn} onClick={props.action}>ADD TO CART</button> */}
         </div>
     );
 };

@@ -16,18 +16,13 @@ const NavbarLinks = () => {
                 </h3>
             </li>
             <li className={styles.link}>
-                <h3>    
+                <h3>
                     <Link to="store/men">MEN</Link>
                 </h3>
             </li>
             <li className={styles.link}>
                 <h3>    
                     <Link to="store/women">WOMEN</Link>
-                </h3>
-            </li>
-            <li className={styles.link}>
-                <h3>
-                    <Link to="store/jewelery">JEWELERY</Link>
                 </h3>
             </li>
         </ul>

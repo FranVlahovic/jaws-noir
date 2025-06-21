@@ -48,7 +48,7 @@ const routes = [
             {
                 path: "store/women/:id",
                 element: <StoreItem />,
-            }
+            },
         ]
     },
     

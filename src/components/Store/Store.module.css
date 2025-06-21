@@ -1,0 +1,37 @@
+.storeItemCard {
+  display: flex;
+  flex-direction: column;
+  width: 28em;
+  gap: 1em;
+}
+.storeItemCardImage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.storeItemImage {
+  height: 34.3em;
+  object-fit: cover;
+  object-position: top;
+}
+.toggleFavoriteBtn {
+  position: absolute;
+  width: 2em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  right: 1em;
+  top: 1em;
+}
+.storeItemCardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.storeItemCardDetails h2,
+.storeItemCardDetails span {
+  color: var(--primary-dark-blue);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
