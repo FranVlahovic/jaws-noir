@@ -16,6 +16,7 @@ const routes = [
             {
                 path: "/",
                 element: <Home />,
+                handle: { title: "Home | Jaws & Noir" }
             },
             {
                 path: "home",

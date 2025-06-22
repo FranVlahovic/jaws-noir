@@ -1,18 +1,28 @@
+.storeItemsSection {
+  background-color: var(--primary-dark-blue);
+  padding: 2em;
+}
+.storeItemsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  padding: 2em 0em;
+}
 .storeItemCard {
   display: flex;
   flex-direction: column;
-  width: 28em;
+  min-width: 26em;
   gap: 1em;
 }
 .storeItemCardImage {
-  display: flex;
-  flex-direction: column;
   position: relative;
+}
+.storeItemCardImage img {
+  display: flex;
+  width: 100%;
 }
 .storeItemImage {
   height: 34.3em;
-  object-fit: cover;
-  object-position: top;
 }
 .toggleFavoriteBtn {
   position: absolute;
@@ -30,8 +40,44 @@
 }
 .storeItemCardDetails h2,
 .storeItemCardDetails span {
-  color: var(--primary-dark-blue);
+  color: var(--primary-white);
   font-size: 1.2rem;
   font-weight: 400;
   font-size: 1.2rem;
+}
+
+.storeItemCardDetails span {
+  justify-self: flex-end;
+}
+
+@media (max-width: 1440px) {
+  .storeItemsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .storeItemImage {
+    height: 25em;
+  }
+  .storeItemCardImage img {
+    width: 100%;
+  }
+  .storeItemCard {
+    min-width: 15em;
+  }
+}
+@media (max-width: 1024px) {
+  .storeItemsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .storeItemsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  .storeItemsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
 }

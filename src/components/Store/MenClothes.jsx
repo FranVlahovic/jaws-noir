@@ -6,11 +6,23 @@ import StoreItemPreview from "./StoreItemPreview";
 
 const MenClothes = () => {
     const [products, setProducts] = useState([]);
-    const { setFavoriteItems } = useOutletContext();
+    const { setFavoriteItems, favoriteItems } = useOutletContext();
     
-    function toggleFavorite(item){
-        setFavoriteItems(prev => [...prev, item])
+    function toggleFavorite(item) {
+        setFavoriteItems(prev => {
+            const isFavorite = prev.find(fav => fav.id === item.id);
+            if (isFavorite) {
+                return prev.filter(fav => fav.id !== item.id);
+            } 
+            else {
+                return [...prev, item];
+            }
+        });
     }
+
+    useEffect(() => {
+        document.title = "Men's Collection | Jaws & Noir"
+    }, [])
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -23,17 +35,22 @@ const MenClothes = () => {
     }, [])
 
     return (
-        <main className="storeItemsSection">
+        <main className={styles.storeItemsSection}>
             <section className={styles.storeItemsContainer}>
-                {products.map((item) => (
-                    <StoreItemPreview 
+                {products.map((item) => {
+                    const isFavorite = favoriteItems.find(fav => fav.id === item.id);
+                    return (    
+                        <StoreItemPreview 
                         id={item.id}
                         image={item.image}
                         toggleFavorite={() => toggleFavorite(item)}
                         title={item.title}
                         price={Number(item.price)}
-                    />
-                ))}
+                        isFavorite={isFavorite}
+                        category={item.category}
+                        />
+                    )
+                })}
             </section>
         </main>
     );

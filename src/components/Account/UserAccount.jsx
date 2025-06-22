@@ -1,7 +1,7 @@
 import LoginUser from "./LoginUser";
 import RegisterUser from "./RegisterUser";
 import styles from "./Account.module.css"; 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const UserAccount = () => {
     const [email, setEmail] = useState("");
@@ -11,6 +11,10 @@ const UserAccount = () => {
         setEmail("admin@admin.com");
         setPassword("admin");
     }
+
+    useEffect(() => {
+            document.title = "Account | Jaws & Noir"
+        }, [])
 
     return (
         <section className={styles.userAccount}>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import RegisterUser from "../Account/RegisterUser";
 import styles from "./AboutUs.module.css";
 import AboutUsCtas from "./AboutUsCtas";
@@ -9,6 +10,11 @@ const AboutUs = () => {
         navigate("/account")
         scrollTo(top)
     }
+
+    useEffect(() => {
+        document.title = "About Us | Jaws & Noir"
+    }, [])
+
     return (
         <main className={styles.aboutUsSection}>
             <div className={styles.aboutUsImageFirst}/>

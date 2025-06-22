@@ -6,6 +6,7 @@
 .favoriteItemsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
   padding: 2em 0em;
 }
 
@@ -18,7 +19,7 @@
 .favoriteItemCard {
   display: flex;
   flex-direction: column;
-  width: 28em;
+  min-width: 26em;
   gap: 1em;
 }
 
