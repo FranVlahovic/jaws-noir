@@ -16,7 +16,7 @@ const Sidebar = ({ cartItems, toggleCartModal, removeCartItem }) => {
             <div className={styles.storeItemsContainer}>
                 {cartItems.length > 0 ?
                     <>
-                        <div style={{ overflowY: cartItems.length > 2 ? "scroll" : "auto", height: cartItems.length > 2 ? "30em" : "unset" }} className={styles.storeCartItems}>
+                        <div className={styles.storeCartItems}>
                             {cartItems.map((props) => (    
                                 <div className={styles.cartItem} key={props.id}>
                                     <div className={styles.cartItemInfo}>
@@ -24,7 +24,7 @@ const Sidebar = ({ cartItems, toggleCartModal, removeCartItem }) => {
                                         <div className={styles.cartItemDetails}>
                                             <h2>{props.title}</h2>
                                             <span>{`CATEGORY: ${props.category}`}</span>
-                                            <span>{`SIZE: ${props.size}`}</span>
+                                            <span>{`SIZE: ${props.size ? props.size : "Default Size"}`}</span>
                                             <span>{`QUANTITY: ${props.quantity}`}</span>
                                             <button className={styles.removeItem} onClick={() => removeCartItem(props.id)}>X Remove Item</button>
                                         </div>
