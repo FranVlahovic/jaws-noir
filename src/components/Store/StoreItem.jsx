@@ -52,14 +52,18 @@ const StoreItem = () => {
                         <li>Comes in default size.</li>
                     ) : (
                         itemSizes.map((size) => (
-                            <li className={styles.storeItemSize} key={size}>
+                            <li
+                                key={size}
+                                className={`${styles.storeItemSize} ${selectedSize === size ? styles.storeItemSizeSelected : ""}`}
+                            >
                                 <button
-                                    className={`storeItemSizeBtn ${selectedSize === size ? "selected" : ""}`}
+                                    className={styles.storeItemSizeBtn}
                                     onClick={() => setSelectedSize(size)}
                                 >
                                     {size}
                                 </button>
                             </li>
+
                         ))
                     )}
                 </ul>

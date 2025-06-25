@@ -58,7 +58,7 @@
   gap: 4em;
 }
 .storeItemMainImage {
-  width: 40em;
+  width: 35em;
   height: 40em;
 }
 .storeItemDetails {
@@ -98,20 +98,25 @@
   display: flex;
   gap: 3em;
 }
-.storeItemSizes li {
+.storeItemSize {
   list-style-type: none;
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
 }
+.storeItemSizes li:hover {
+  opacity: 1;
+}
+.storeItemSizeSelected {
+  opacity: 1;
+  border-bottom: 1px solid var(--primary-white);
+}
+
 .storeItemSizes button {
   border: none;
   background-color: transparent;
   color: var(--primary-white);
   cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s ease-in-out;
   font-size: 1rem;
-}
-.storeItemSizes button:hover {
-  opacity: 1;
 }
 
 .loginBtn {
@@ -141,6 +146,10 @@
 .storeItemDelivery img {
   width: 1.5em;
   filter: invert(1);
+}
+
+.storeItemSizeBtn .selected {
+  background-color: var(--primary-white);
 }
 
 @media (max-width: 1440px) {
