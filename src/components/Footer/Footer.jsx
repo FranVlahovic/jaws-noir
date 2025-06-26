@@ -7,6 +7,8 @@ import InstagramIcon from "../../assets/icons/instagram.svg";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
+    const isMobile = window.innerWidth <= 768;
+
     return (
         <footer>
             <div className={styles.customerService}>
@@ -41,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={styles.followUs}>
-                    <h2>FOLLOW US</h2>
+                    {isMobile ? null : <h2>FOLLOW US</h2>}
                     <div className={styles.followUsSocials}>
                         <img src={FacebookIcon} alt="Footer Socials Facebook Icon" className={styles.socialsIcon} />
                         <a href="http://linkedin.com/in/franvlahovic/" target="_blank" >

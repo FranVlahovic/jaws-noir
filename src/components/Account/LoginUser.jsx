@@ -1,12 +1,15 @@
 import styles from "./Account.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SuccessIcon from "../../assets/icons/check-bold.svg";
 import AccountButton from "./AccountButton";
 
 const LoginUser = ({ email, setEmail, password, setPassword, autoFillForm }) => {
 
     const [showLoginPopup, setShowLoginPopup] = useState(false);
-    const [logStatus, setLogStatus] = useState("");
+    const [logStatus, setLogStatus] = useState(() => {
+        const storedStatus = localStorage.getItem('logStatus');
+        return storedStatus ? storedStatus : ""
+    });
 
     // PUBLIC SINCE IT DOESN'T HAVE REAL AUTH
     const loginDetails = [
@@ -49,6 +52,10 @@ const LoginUser = ({ email, setEmail, password, setPassword, autoFillForm }) => 
         setEmail("")
         setPassword("")
     }
+
+    useEffect(() => {
+        localStorage.setItem('logStatus', logStatus);
+    }, [logStatus])
 
 
     return (
