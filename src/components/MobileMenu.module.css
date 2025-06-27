@@ -18,3 +18,10 @@
   background-color: transparent;
   color: var(--primary-white);
 }
+
+@media (max-width: 768px) {
+  .menuSidebar img {
+    height: 20em;
+    object-fit: cover;
+  }
+}

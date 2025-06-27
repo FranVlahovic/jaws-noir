@@ -95,10 +95,47 @@ li a:hover {
   font-size: 0.7em;
 }
 
-@media (max-width: 425px) {
+@media (max-width) {
+}
+@media (max-width: 768px) {
   .navbar {
     position: relative;
   }
+  .menuBtn {
+    border: none;
+    background-color: transparent;
+    width: 2em;
+  }
+  .menuBtn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: var(--primary-white-icon);
+  }
+  .navbarLinks {
+    flex-direction: column;
+  }
+  .socialLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+  }
+  .socialLinks a {
+    text-decoration: none;
+  }
+  .socialLinks h3 {
+    opacity: 0.6;
+    font-size: 1.2rem;
+  }
+  .link h3 {
+    font-size: 1.2rem;
+  }
+  li a {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 425px) {
   .menuBtn {
     border: none;
     background-color: transparent;

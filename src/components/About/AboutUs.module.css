@@ -101,3 +101,31 @@
 .aboutUsRegister ul {
   text-align: left;
 }
+
+@media (max-width: 1024px) {
+  .aboutUsMain {
+    padding: 9em 10em;
+  }
+
+  .aboutUsImageFirst,
+  .aboutUsImageSecond {
+    background-size: cover;
+    height: 40em;
+    z-index: 1;
+    position: relative;
+  }
+  .aboutUsCTA {
+    display: flex;
+    align-items: center;
+    gap: 10em;
+  }
+  .ctaElm {
+    width: 15em;
+  }
+  .ctaElm p {
+    width: 25em;
+  }
+}
+
+@media (max-width: 768px) {
+}

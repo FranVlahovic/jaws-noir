@@ -87,10 +87,12 @@ footer {
   gap: 1em;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 3em;
   }
   .locationSocials {
@@ -98,6 +100,26 @@ footer {
   }
   .followUsSocials {
     justify-content: space-around;
+  }
+  .followUsSocials img {
+    width: 1.8em;
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3em;
+  }
+  .locationSocials {
+    gap: 3em;
+    align-items: center;
+  }
+  .followUsSocials {
+    gap: 3em;
   }
   .followUsSocials img {
     width: 1.8em;
