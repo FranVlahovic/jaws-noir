@@ -8,6 +8,11 @@
   gap: 2em;
   padding: 2em 0em;
 }
+.storeItemsSection h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--primary-white);
+}
 .storeItemCard {
   display: flex;
   flex-direction: column;
@@ -176,10 +181,30 @@
   .storeItemsContainer {
     grid-template-columns: repeat(2, 1fr);
   }
+  .storeItemMainImage {
+    width: 25em;
+    height: 30em;
+  }
+  .storeItemSection {
+    justify-content: space-between;
+    padding: 2em;
+  }
+  .storeItemDetails {
+    max-width: 40em;
+  }
 }
 @media (max-width: 425px) {
   .storeItemsContainer {
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
+  }
+  .storeItemsSection h1 {
+    font-size: 1.2rem;
+  }
+  .storeItemSection {
+    flex-direction: column;
+  }
+  .storeItemMainImage {
+    height: 28em;
   }
 }

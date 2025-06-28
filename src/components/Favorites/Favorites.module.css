@@ -72,3 +72,36 @@
 .favoriteToCartBtn:hover {
   opacity: 1;
 }
+
+@media (max-width: 1440px) {
+  .favoriteItemImage {
+    height: 32em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .favoriteItemsContainer {
+    gap: 1.4em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .favoriteItemCard {
+    min-width: 18em;
+  }
+  .favoriteItemImage {
+    height: 25em;
+  }
+}
+
+@media (max-width: 768px) {
+  .favoriteItemsContainer {
+    gap: 1.4em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .favoriteItemsContainer {
+    gap: 1.4em;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

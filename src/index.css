@@ -33,9 +33,11 @@ img {
   top: 0;
   left: 0;
   background-color: rgba(8, 8, 8, 0.6);
-  z-index: 1;
+  z-index: 100;
 }
-
+.menuOverlay {
+  z-index: 10;
+}
 ul {
   list-style-position: inside;
 }

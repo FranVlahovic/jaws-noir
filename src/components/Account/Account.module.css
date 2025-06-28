@@ -132,3 +132,56 @@ h1 {
   flex-direction: column;
   gap: 1em;
 }
+
+@media (max-width: 1024px) {
+  .userAccount {
+    padding-left: 2em;
+    padding-right: 2em;
+    gap: 2em;
+  }
+  .loginContainer,
+  .registerContainer {
+    max-width: 25em;
+  }
+  .registerContainer {
+    gap: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .userAccount {
+    flex-direction: column-reverse;
+    padding: 2em;
+    gap: 4em;
+  }
+  .loginContainer,
+  .registerContainer {
+    max-width: 30em;
+  }
+  .loginContainer {
+    align-self: center;
+  }
+  .loginContainer h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .userAccount {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2em;
+    gap: 4em;
+  }
+  .loginContainer,
+  .registerContainer {
+    max-width: 20em;
+  }
+  .loginContainer h1,
+  .registerContainer h1 {
+    font-size: 1.5rem;
+  }
+  .loginBtn {
+    padding: 1em;
+  }
+}

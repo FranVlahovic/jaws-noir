@@ -111,16 +111,35 @@
   transform: rotate(180deg);
 }
 
+@media (max-width: 1024px) {
+  .carouselSlideHer,
+  .carouselSlideHim {
+    height: 45em;
+  }
+  .carouselHeading,
+  .clubHeading {
+    font-size: 1.7rem;
+  }
+}
 @media (max-width: 768px) {
   .arrowBtnLeft,
   .arrowBtnRight {
     opacity: 1;
   }
+  .carouselSlideHer,
+  .carouselSlideHim {
+    height: 40em;
+  }
+
+  .carouselHeading,
+  .clubHeading {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 425px) {
   .clubHeading,
   .carouselHeading {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .homeClub {
     padding: 0 2em;

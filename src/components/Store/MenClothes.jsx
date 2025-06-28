@@ -36,6 +36,7 @@ const MenClothes = () => {
 
     return (
         <main className={styles.storeItemsSection}>
+            <h1>MEN'S COLLECTION</h1>
             <section className={styles.storeItemsContainer}>
                 {products.map((item) => {
                     const isFavorite = favoriteItems.find(fav => fav.id === item.id);

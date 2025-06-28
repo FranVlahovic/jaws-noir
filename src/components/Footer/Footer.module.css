@@ -89,17 +89,21 @@ footer {
 
 @media (max-width: 768px) {
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3em;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3em 2em;
   }
+
+  .legalInformation,
   .locationSocials {
-    gap: 3em;
+    margin-left: auto;
+  }
+  .legalInformation {
+    margin-right: 2.5em;
   }
   .followUsSocials {
-    justify-content: space-around;
+    gap: 2em;
   }
   .followUsSocials img {
     width: 1.8em;
@@ -123,5 +127,9 @@ footer {
   }
   .followUsSocials img {
     width: 1.8em;
+  }
+  .legalInformation,
+  .locationSocials {
+    margin: 0;
   }
 }
