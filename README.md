@@ -101,54 +101,9 @@ On smaller screens, a sliding sidebar menu replaces the navbar for easier mobile
 
 ---
 
-## Gallery
-
-### Images
-
-#### Original Version
-
-<div align="center">
-  <img src="./src/assets/images/screenshots/jaws1.png" alt="Original size Screenshot 1" width="400">
-  <img src="./src/assets/images/screenshots/jaws2.png" alt="Original size Screenshot 2" width="400">
-  <img src="./src/assets/images/screenshots/jaws3.png" alt="Original size Screenshot 3" width="400">
-  ---
-  <img src="./src/assets/images/screenshots/jaws4.png" alt="Original size Screenshot 4" width="400">
-  <img src="./src/assets/images/screenshots/jaws5.png" alt="Original size Screenshot 5" width="400">
-  <img src="./src/assets/images/screenshots/jaws6.png" alt="Original size Screenshot 6" width="400">
-  <img src="./src/assets/images/screenshots/jaws7.png" alt="Original size Screenshot 7" width="400">
-  <img src="./src/assets/images/screenshots/jaws8.png" alt="Original size Screenshot 8" width="400">
-  <img src="./src/assets/images/screenshots/jaws9.png" alt="Original size Screenshot 9" width="400">
-  <img src="./src/assets/images/screenshots/jaws10.png" alt="Original size Screenshot 10" width="400">
-</div>
-
-#### Tablet Version
-
-<div align="center">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet1.png" alt="Tablet size Screenshot 1" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet2.png" alt="Tablet size Screenshot 2" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet3.png" alt="Tablet size Screenshot 3" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet4.png" alt="Tablet size Screenshot 4" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet5.png" alt="Tablet size Screenshot 5" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet6.png" alt="Tablet size Screenshot 6" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet7.png" alt="Tablet size Screenshot 7" width="400">
-    <img src="./src/assets/images/screenshots/tablet/jaws-tablet8.png" alt="Tablet size Screenshot 8" width="400">
-</div>
-
-#### Mobile Version
-
-<div align="center">  
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile1.png" alt="Mobile size Screenshot 1" width="400">
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile2.png" alt="Mobile size Screenshot 2" width="400">
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile3.png" alt="Mobile size Screenshot 3" width="400">
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile4.png" alt="Mobile size Screenshot 4" width="400">
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile5.png" alt="Mobile size Screenshot 5" width="400">
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile6.png" alt="Mobile size Screenshot 6" width="400">
-  <img src="./src/assets/images/screenshots/mobile/jaws-mobile7.png" alt="Mobile size Screenshot 7" width="400">
-</div>
-
 ## Built With
 
-<div style="display: flex; gap: 20px; align-items: end;">
+<div style="align="center">
   <div style="text-align: center;">
     <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="50" height="50"/>
@@ -176,6 +131,52 @@ On smaller screens, a sliding sidebar menu replaces the navbar for easier mobile
     </a>
     <div>React</div>
   </div>
+</div>
+
+---
+
+## Gallery
+
+### Images
+
+#### Original Version
+
+<div align="center">
+  <img src="./src/assets/images/screenshots/jaws1.png" alt="Original size Screenshot 1" width="30%">
+  <img src="./src/assets/images/screenshots/jaws2.png" alt="Original size Screenshot 2" width="30%">
+  <img src="./src/assets/images/screenshots/jaws3.png" alt="Original size Screenshot 3" width="30%">
+  <img src="./src/assets/images/screenshots/jaws4.png" alt="Original size Screenshot 4" width="30%">
+  <img src="./src/assets/images/screenshots/jaws5.png" alt="Original size Screenshot 5" width="30%">
+  <img src="./src/assets/images/screenshots/jaws6.png" alt="Original size Screenshot 6" width="30%">
+  <img src="./src/assets/images/screenshots/jaws7.png" alt="Original size Screenshot 7" width="30%">
+  <img src="./src/assets/images/screenshots/jaws8.png" alt="Original size Screenshot 8" width="30%">
+  <img src="./src/assets/images/screenshots/jaws9.png" alt="Original size Screenshot 9" width="30%">
+  <img src="./src/assets/images/screenshots/jaws10.png" alt="Original size Screenshot 10" width="30%">
+</div>
+
+#### Tablet Version
+
+<div align="center">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet1.png" alt="Tablet size Screenshot 1" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet2.png" alt="Tablet size Screenshot 2" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet3.png" alt="Tablet size Screenshot 3" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet4.png" alt="Tablet size Screenshot 4" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet5.png" alt="Tablet size Screenshot 5" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet6.png" alt="Tablet size Screenshot 6" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet7.png" alt="Tablet size Screenshot 7" width="30%">
+    <img src="./src/assets/images/screenshots/tablet/jaws-tablet8.png" alt="Tablet size Screenshot 8" width="30%">
+</div>
+
+#### Mobile Version
+
+<div align="center">  
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile1.png" alt="Mobile size Screenshot 1" width="30%">
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile2.png" alt="Mobile size Screenshot 2" width="30%">
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile3.png" alt="Mobile size Screenshot 3" width="30%">
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile4.png" alt="Mobile size Screenshot 4" width="30%">
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile5.png" alt="Mobile size Screenshot 5" width="30%">
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile6.png" alt="Mobile size Screenshot 6" width="30%">
+  <img src="./src/assets/images/screenshots/mobile/jaws-mobile7.png" alt="Mobile size Screenshot 7" width="30%">
 </div>
 
 ---
